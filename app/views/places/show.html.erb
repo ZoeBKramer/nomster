@@ -28,6 +28,42 @@
     </script>
 
     <div id="map"></div>
+  <% elsif @place.address.present? %>
+    <script>
+      // https://developers.google.com/maps/documentation/javascript/geocoding
+      var geocoder;
+      var map;
+
+      function initialize() {
+        geocoder = new google.maps.Geocoder();
+        var mapOptions = {
+          zoom: 12,
+          center: new google.maps.LatLng(36.444930, -88.336430)
+        }
+        map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+        geocoder.geocode({
+          'address': "<%= @place.address %>"
+        }, function(results, status) {
+          if (status == 'OK') {
+            map.setCenter(results[0].geometry.location);
+            var marker = new google.maps.Marker({
+              position: results[0].geometry.location,
+              map: map,
+              title: 'Hello World!'
+            })
+          } else {
+            console.error("Geocoding was unsuccessful: " + status + "\n" + results)
+          }
+        })
+      }
+    </script>
+
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvqkJ2ToNrC2kNDKse5bAJDRl1o9YfOfQ&callback=initialize">
+    </script>
+
+    <div id="map"></div>
   <% end %>
 
   <br />
