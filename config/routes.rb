@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   get 'new', to: 'places#new'
   resources :places do
     resources :comments, only: :create
+    resources :photos, only: :create
   end  
 end
