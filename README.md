@@ -1,4 +1,4 @@
-Click [here](https://nomster-zoe-kramer.herokuapp.com/) to visit Nomster
+Click [here](https://nomster-zoe-kramer.herokuapp.com/) to visit Nomster.
 
 # Set Up Vagrant
 
