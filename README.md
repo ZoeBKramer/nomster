@@ -8,13 +8,69 @@ A web application, built with Ruby on Rails, that uses the Google Maps API to sh
 
 ### Code Structure
 
-**Models** -
+**Models**:
 
-**Views** - 
+*Place Model* - This can be found in [`app\models\place.rb`](https://github.com/ZoeBKramer/nomster/blob/master/app/models/place.rb). This model handles the validations for entering in a new place as well as stores the geocoded address ([geocoder gem](https://github.com/alexreisner/geocoder) handles the geocoding process). This model ties the place to the user that created it and allows it to have many comments and photos.  
 
-**Controllers** -
+*User Model* - This can be found in [`app\models\user.rb`](https://github.com/ZoeBKramer/nomster/blob/master/app/models/user.rb). This model allows the user to have many places, comments, and photos. We use the devise gem in this model to handle user authentication. 
 
-**Gemfiles** - 
+*Photo Model* - This can be found in [`app\models\photo.rb`](https://github.com/ZoeBKramer/nomster/blob/master/app/models/photo.rb). This model ties the photo to the user that posted it, as well as the place it was posted under. We use the Carrierwave gem to handle the actual photo uploading, using AWS as our storage. 
+
+*Comment Model* - This can be found in [`app\models\comment.rb`](https://github.com/ZoeBKramer/nomster/blob/master/app/models/comment.rb). This model handles the validations for entering in a new comment. This model also ties the comment to the user that posted it, as well as the place it was posted under. The creation of a comment triggers the sending of an email, using the NotificationMailer. This model supports both a message and a rating.  
+
+**Views**:
+
+*Index View* - This is found in [`app\views\places\index.html.erb`](https://github.com/ZoeBKramer/nomster/blob/master/app/views/places/index.html.erb). This displays every place in the database onto the page, as well as the most recent comment on the place. At the top of the index page, a carousel is displayed, scrolling through a couple of photos. 
+
+![The Index View Image](https://raw.githubusercontent.com/ZoeBKramer/nomster/master/app/assets/images/Nomster/Nomster.png)
+
+*New Place View* - This is found in [`app\views\places\new.html.erb`](https://github.com/ZoeBKramer/nomster/blob/master/app/views/places/new.html.erb). This creates the form that the user can enter a place into. 
+
+![The New Place View Image](https://raw.githubusercontent.com/ZoeBKramer/nomster/master/app/assets/images/Nomster/NewPlace.png)
+
+*Edit Place View* - This is found in [`app\views\places\edit.html.erb`](https://github.com/ZoeBKramer/nomster/blob/master/app/views/places/edit.html.erb). This creates the form that the user can use to update the places data. 
+
+![The Edit Place View Image](https://raw.githubusercontent.com/ZoeBKramer/nomster/master/app/assets/images/Nomster/EditPlace.png)
+
+*Show Place View* - This is found in [`app\views\places\show.html.erb`](https://github.com/ZoeBKramer/nomster/blob/master/app/views/places/show.html.erb). This displays the specific place that the user clicked on as well as a map with the pinpointed location of that place. On this page, it shows the comments and photos that users have posted under this place. This page also contains the modals for entering a new comment/rating as well as a photo/caption. 
+
+![The Show Place View Image](https://raw.githubusercontent.com/ZoeBKramer/nomster/master/app/assets/images/Nomster/Place.png)
+
+![The Comment and Rating Modal Image](https://raw.githubusercontent.com/ZoeBKramer/nomster/master/app/assets/images/Nomster/Comment.png)
+
+![The Photo and Caption Modal Image](https://raw.githubusercontent.com/ZoeBKramer/nomster/master/app/assets/images/Nomster/Photo.png)
+
+*User Dashboard View* - This is found in [`app\views\users\show.html.erb`](https://github.com/ZoeBKramer/nomster/blob/master/app/views/users/show.html.erb). This displays the users email, how long they have been a member, their comments, and their places. 
+
+![The User Dashboard View Image](https://raw.githubusercontent.com/ZoeBKramer/nomster/master/app/assets/images/Nomster/UserShow.png)
+
+*Comment Added Email* - This is found in [`app\views\notification_mailer\comment_added.html.erb`](https://github.com/ZoeBKramer/nomster/blob/master/app/views/notification_mailer/comment_added.html.erb) as well as [`app\views\notification_mailer\comment_added.text.erb`](https://github.com/ZoeBKramer/nomster/blob/master/app/views/notification_mailer/comment_added.text.erb). This controls what email is sent to the user whenever a comment is added to a place that they have created. 
+
+![The Comment Added Email Image](https://raw.githubusercontent.com/ZoeBKramer/nomster/master/app/assets/images/Nomster/CommentAddedEmail.png)
+
+*Header and Footer* - This is found in [`app\views\layouts\application.html.erb`](https://github.com/ZoeBKramer/nomster/blob/master/app/views/layouts/application.html.erb). This controls what is displayed in the header and footer on every page in the application.
+
+**Controllers**:
+
+**Gemfiles**:
+
+[bootstrap gem]() -
+
+[will-paginate gem]() -
+
+[simple-form gem]() -
+
+[font-awesome-rails gem]() -
+
+[devise gem]() -
+
+[geocoder gem]() -
+
+[figaro gem]() - 
+
+[carrierwave gem]() -
+
+[fog-aws gem]() -
 
 # Set Up Vagrant
 
