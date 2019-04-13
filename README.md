@@ -82,23 +82,23 @@ A web application, built with Ruby on Rails, that uses the Google Maps API to sh
 
 **Gemfiles**:
 
-[bootstrap gem](https://github.com/twbs/bootstrap-rubygem) -
+[bootstrap gem](https://github.com/twbs/bootstrap-rubygem) - helps format the page 
 
-[will-paginate gem](https://github.com/mislav/will_paginate) -
+[will-paginate gem](https://github.com/mislav/will_paginate) - paginates the database queries
 
-[simple-form gem](https://github.com/plataformatec/simple_form) -
+[simple-form gem](https://github.com/plataformatec/simple_form) - creates the form in which data can be entered into
 
-[font-awesome-rails gem](https://github.com/bokmann/font-awesome-rails) -
+[font-awesome-rails gem](https://github.com/bokmann/font-awesome-rails) - adds a library of icons that can be used in the application
 
-[devise gem](https://github.com/plataformatec/devise) -
+[devise gem](https://github.com/plataformatec/devise) - we used this gem for the authentication of users  
 
-[geocoder gem](https://github.com/alexreisner/geocoder) -
+[geocoder gem](https://github.com/alexreisner/geocoder) - we used this gem for reverse geocoding
 
-[figaro gem](https://github.com/laserlemon/figaro) - 
+[figaro gem](https://github.com/laserlemon/figaro) - this gem secured sensitive information (ie. secret keys) by not pushing it to Github, only production 
 
-[carrierwave gem](https://github.com/carrierwaveuploader/carrierwave) -
+[carrierwave gem](https://github.com/carrierwaveuploader/carrierwave) - provides a simple and extremely flexible way to upload files from Ruby applications
 
-[fog-aws gem](https://github.com/fog/fog-aws) -
+[fog-aws gem](https://github.com/fog/fog-aws) - supports Amazon Web Services
 
 # Set Up Vagrant
 
