@@ -10,7 +10,7 @@ A web application, built with Ruby on Rails, that uses the Google Maps API to sh
 
 **Models**:
 
-*Place Model* - This can be found in [`app\models\place.rb`](https://github.com/ZoeBKramer/nomster/blob/master/app/models/place.rb). This model handles the validations for entering in a new place as well as stores the geocoded address ([geocoder gem](https://github.com/alexreisner/geocoder) handles the geocoding process). This model ties the place to the user that created it and allows it to have many comments and photos.  
+*Place Model* - This can be found in [`app\models\place.rb`](https://github.com/ZoeBKramer/nomster/blob/master/app/models/place.rb). This model handles the validations for entering in a new place as well as stores the geocoded address. This model ties the place to the user that created it and allows it to have many comments and photos.  
 
 *User Model* - This can be found in [`app\models\user.rb`](https://github.com/ZoeBKramer/nomster/blob/master/app/models/user.rb). This model allows the user to have many places, comments, and photos. We use the devise gem in this model to handle user authentication. 
 
@@ -52,25 +52,53 @@ A web application, built with Ruby on Rails, that uses the Google Maps API to sh
 
 **Controllers**:
 
+*Places Controller* -
+
+* Index Method: Displays only 5 places per page using the will-paginate gem.
+
+* New Method: Initializes the place object.
+
+* Create Method: Adds a new place, if valid, into the database.
+
+* Show Method: Finds the place by ID and initializes the photo and comment object.
+
+* Edit Method: Finds the place by ID, only if the user logged in is the same as the user who created the place. 
+
+* Update Method: Updates the place, only if the user logged in is the same as the user who created the place. 
+
+* Destroy Method: Finds place by ID and destroys it, only if the user logged in is the same as the user who created the place. 
+
+*Photos Controller* -
+
+* Create Method: Adds a new photo, if valid, into the database.
+
+*Comments Controller* -
+
+* Create Method: Adds a new comment, if valid, into the database. 
+
+*Users Controller* -
+
+* Show Method: Finds the user by ID. 
+
 **Gemfiles**:
 
-[bootstrap gem]() -
+[bootstrap gem](https://github.com/twbs/bootstrap-rubygem) -
 
-[will-paginate gem]() -
+[will-paginate gem](https://github.com/mislav/will_paginate) -
 
-[simple-form gem]() -
+[simple-form gem](https://github.com/plataformatec/simple_form) -
 
-[font-awesome-rails gem]() -
+[font-awesome-rails gem](https://github.com/bokmann/font-awesome-rails) -
 
-[devise gem]() -
+[devise gem](https://github.com/plataformatec/devise) -
 
-[geocoder gem]() -
+[geocoder gem](https://github.com/alexreisner/geocoder) -
 
-[figaro gem]() - 
+[figaro gem](https://github.com/laserlemon/figaro) - 
 
-[carrierwave gem]() -
+[carrierwave gem](https://github.com/carrierwaveuploader/carrierwave) -
 
-[fog-aws gem]() -
+[fog-aws gem](https://github.com/fog/fog-aws) -
 
 # Set Up Vagrant
 
