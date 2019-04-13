@@ -1,5 +1,21 @@
 Click [here](https://nomster-zoe-kramer.herokuapp.com/) to visit Nomster.
 
+# Nomster
+
+### Overview
+
+A web application, built with Ruby on Rails, that uses the Google Maps API to show restaurants, their reviews, and images. Users are able to sign up, comment, and upload new restaurants to the website and are emailed when someone comments on their own uploaded restaurant. 
+
+### Code Structure
+
+**Models** -
+
+**Views** - 
+
+**Controllers** -
+
+**Gemfiles** - 
+
 # Set Up Vagrant
 
 Click [here](https://github.com/university-bootcamp/coding-environment/blob/master/windows-vagrant.md) to find the instructions for setting up Vagrant.
@@ -40,10 +56,4 @@ In a separate terminal, change the directory `cd /vagrant/src/nomster`
 
 Start your server by running `rails server -b 0.0.0.0 -p 3000`
 
-# Nomster
 
-### Overview
-
-A web application, built with Ruby on Rails, that uses the Google Maps API to show restaurants, their reviews, and images. Users are able to sign up, comment, and upload new restaurants to the website and are emailed when someone comments on their own uploaded restaurant. 
-
-### Code Structure
