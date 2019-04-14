@@ -52,7 +52,7 @@ A web application, built with Ruby on Rails, that uses the Google Maps API to sh
 
 **Controllers**:
 
-*Places Controller* -
+*Places Controller* - [`app\controllers\places_controller.rb`](https://github.com/ZoeBKramer/nomster/blob/master/app/controllers/places_controller.rb)
 
 * Index Method: Displays only 5 places per page using the will-paginate gem.
 
@@ -68,15 +68,15 @@ A web application, built with Ruby on Rails, that uses the Google Maps API to sh
 
 * Destroy Method: Finds place by ID and destroys it, only if the user logged in is the same as the user who created the place. 
 
-*Photos Controller* -
+*Photos Controller* - [`app\controllers\photos_controller.rb`](https://github.com/ZoeBKramer/nomster/blob/master/app/controllers/photos_controller.rb)
 
 * Create Method: Adds a new photo, if valid, into the database.
 
-*Comments Controller* -
+*Comments Controller* - [`app\controllers\comments_controller.rb`](https://github.com/ZoeBKramer/nomster/blob/master/app/controllers/comments_controller.rb)
 
 * Create Method: Adds a new comment, if valid, into the database. 
 
-*Users Controller* -
+*Users Controller* - [`app\controllers\users_controller.rb`](https://github.com/ZoeBKramer/nomster/blob/master/app/controllers/users_controller.rb)
 
 * Show Method: Finds the user by ID. 
 
@@ -94,7 +94,7 @@ A web application, built with Ruby on Rails, that uses the Google Maps API to sh
 
 [geocoder gem](https://github.com/alexreisner/geocoder) - we used this gem for reverse geocoding
 
-[figaro gem](https://github.com/laserlemon/figaro) - this gem secured sensitive information (ie. secret keys) by not pushing it to Github, only production 
+[figaro gem](https://github.com/laserlemon/figaro) - this gem secures sensitive information (ie. secret keys) by not pushing it to Github, only production 
 
 [carrierwave gem](https://github.com/carrierwaveuploader/carrierwave) - provides a simple and extremely flexible way to upload files from Ruby applications
 
